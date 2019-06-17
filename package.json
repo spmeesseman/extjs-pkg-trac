@@ -1,0 +1,81 @@
+{
+    "name": "@perryjohnson/extjs-pkg-trac",
+    "version": "1.0.0",
+    "displayName": "ExtJS Package Wrapper for Trac",
+    "description": "ExtJS Package Wrapper for Trac RPC",
+    "license": "MIT",
+    "author": {
+        "name": "Scott Meesseman",
+        "email": "spmeesseman@gmail.com"
+    },
+    "homepage": "https://github.com/spmeesseman/extjs-pkg-trac/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/spmeesseman/extjs-pkg-trac.git"
+    },
+    "bugs": {
+        "url": "https://github.com/spmeesseman/extjs-pkg-trac/issues"
+    },
+    "devDependencies": {
+        "@perryjohnson/app-publisher": "^1.4.13"
+    },
+    "scripts": {
+        "app-publish": "app-publisher -p ps",
+        "app-publish-dry": "app-publisher -p ps --dry-run"
+    },
+    "keywords": [
+        "sencha extjs",
+        "trac",
+        "ticket system",
+        "project management"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "src"
+    ],
+    "sencha": {
+        "name": "trac",
+        "namespace": "Ext",
+        "framework": "ext",
+        "type": "code",
+        "creator": "spmeesseman",
+        "summary": "Package wrapper singleton for Trac",
+        "detailedDescription": "Package wrapper singleton for Trac RPC",
+        "version": "1.0.0.0",
+        "compatVersion": "1.0.0",
+        "format": "1",
+        "slicer": null,
+        "output": "${framework.dir}/build/packages/${package.name}",
+        "local": true,
+        "resource": {
+            "paths": ""
+        },
+        "sass": {
+            "namespace": "Ext",
+            "etc": [
+                "${package.dir}/sass/var"
+            ],
+            "var": [
+                "${package.dir}/sass/var"
+            ],
+            "src": [
+                "${package.dir}/sass/src",
+                "${package.dir}/sass/src/main.scss"
+            ]
+        },
+        "classpath": [
+            "${package.dir}/src"
+        ],
+        "overrides": [
+            "${package.dir}/overrides"
+        ],
+        "requires": [
+            "core"
+        ],
+        "ignore": [
+            "(^|/)CVS(/?$|/.*?$)"
+        ]
+    }
+}
